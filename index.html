@@ -1,13 +1,95 @@
-<!-- Sintaxis html // Elemento html se formara como etiqueta de inicio+contenidos+etiqueta de linea-->
- <p>Hola mundo, ¿Como estás?</p>
+<!DOCTYPE html>
+<html lang="es">
 
-<!-- Norma 1: h1 es el título principal de una página web, es obligatorio tener un h1 y solo tener un h1-->
- <h1>Título de Página</h1>
- <h2>Encabezado nivel 2</h2>
- <h3>Encabezado Nivel 3</h3>
- <h4>Encabezado Nivel 4</h4>
-<h5>Encabezado Nivel 5</h5>
- <h6>Encabezado Nivel 6</h6>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html semantico</title>
+</head>
 
-<!-- Norma 2: se puede usar los h que queramos a elección-->
- <!-- Norma 3: no podemos saltarnos ningún nivel -->
+<body>
+    <header>
+        <h1>HTML SEMANTICO</h1>
+        <!--Menú de navegación-->
+        <nav>
+            <!-- Creamos lista.Se pueden crear listas ordenadas y desordenadas. Varia una de otra respecto al orden de los elementos, si tienen preferencia o no. Normalmente, se despliega en web pc de forma horizontal. Cuando no hay suficiente espacio,apararece como menú "hamburguesa", que consigue adapatarse en forma de columna -->
+            <ul>
+                <li> <a href="contacto.html">contacto</a></li>
+                <li> <a href="quienessomos.html">quiénes somos</a></li>
+                <li><a href="servicios.html">servicios</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Las secciones van dentro de la etiqueta main -->
+     <!-- estamos creando dentro de main blockquote para añadir alguna cita -->
+    <main>
+        <section>
+            <h2>Lo que nos motiva</h2>
+            <blockquote lang="en" title="Cita de Don Norman" cite="https://www.azquotes.es/author/18629-Donald_A_Norman?p=2">
+                <p>La gente propone, la ciencia estudia, la tecnología se conforma.</p>
+                <!-- aqui explican la diferencia de utilizar cite como elemento y comoa tributo.Cursiva para autor, libro u obra creativa de otra persona -->
+                <p><cite>Galileo</cite>
+                    <!-- blockquote es citar un bloque de texto, pero si es una frase pequeña, como una linea, se usaria q. En ambos casos, se podria usar q. Estos tres elementos se usan para citas. nunca va a ser la eleccion de html de loq eu se representa. vamos a recurrir una q cuando sea una cita en linea -->
+                    <q
+    cite="https://www.imdb.com/title/tt0062622/quotes/?item=qt0396921&ref_=ext_shr_lnk">
+    I'm sorry, Dave. I'm afraid I can't do that.
+  </q>
+            </blockquote>
+            <!-- EJERCICIO: BUSCAR CITE Y PARA QUE SE USA.AÑADIR UN EJEMPLO//SOLUCION: Está bastante estendido el mal uso de este elemento, mucha gente lo usa para marcar el texto de las citas en vez del autor, para marcar el texto están los elementos q (en línea) y blockquote (en bloque). -->
+        <section>
+            <!-- Todas las secciones si o si necesitan titulo (h2,h3...) -->
+            <h2>PROYECTOS</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur doloribus adipisci vel, officia
+                magnam labore at. Ab nihil commodi eum corporis iste obcaecati. Similique dolore officia, rem architecto
+                placeat inventore!</p>
+            <article>
+                <h3>Proyecto "El Semántico"</h3>
+                <!-- para decir que rellene texto falsos con x palabras, le decimos "p lorem5" -->
+                <p>Lorem ipsum dolor sit amet.</p>
+                <!-- para añadir una imagen, usamos etiqueta imng y en atributo src, colocamos el enlace del archivo; en alt, colocariamos lo alternativo en el caso de que el archivo no llegue a cargar -->
+                <img src="https://picsum.photos/200/300" alt="Imagen realizada a través de un Dron">
+            </article>
+            <!-- debemos teneer en cuenta que para crear un árticulo, debe incluir siempre el encabezado (h), texto o parrafo, imagen o no de referencia o subido y enlace al encabezado de nuevo u otros enlaces de interes -->
+            <article>
+                <h3>Otro proyecto a tener en cuenta</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, culpa sunt perspiciatis labore
+                    facere quidem nobis fuga commodi ea voluptate?</p>
+                <img src="https://picsum.photos/200/300" alt="Foto extraida de recursos de Internet">
+                <!-- Cuando tenga contenido multimedia propia, lo podemos meter dentro de la etiqueta "figure" para incluir contenido multimedia. tiene mas valor cuando le incluye dentro de figure el elemento figcaption, es decir, el encabezado o pie de foto. este elemento funciona como bloque de informacion para el navegador. es una forma de añadir mayor valor semantico. la misma estructura tendria que hacerla en los demas -->
+                <a href="Otro proyecto a tener en cuenta.html">Proyecto a tener en cuenta</a>
+            </article>
+        </section>
+        <!-- la siguiente linea es para generar una abreviatura. lo que va dentro de cada uno, lo diferenciamos con ">".Para poner un elemento dentro de otro, usamos +article*3.Dentro de cada article colocamos un titulo y una imagen.Como es dentro, ponemos mayor que. Para dejarlo bien, tenemos que añadir el atributo con href-->
+        <section>
+            section>h2{equipo}+article*3>h3{Nombre $}+(p>lorem5)+img[src="https://picsum.photos/200/300"]
+            <!-- section>h2{equipo}+article*3>h3{Nombre $}+(p>lorem5)+img[href="https://picsum.photos/200/300"]  -->
+        </section>
+
+        <!--Para dejar el codigo todo bonito, le damos a dar formato al codigo desde el boton derecho del raton. o al guardar, se va a ajustar esta opcion automaticamente sin tener que dar al ratón. -->
+    </main>
+    <!-- Añadir elemento de publicidad (Ejemplo) que no es relevente usamos aside -->
+     <aside>
+        <!-- para añadir elemento de publicidad -->
+         <a href="https://empresa.com">
+            <img src="https://picsum.photos/200" alt="Publicidad">
+         </a>
+     </aside>
+    <!-- elemento footer para pie de pagina. Puede tener contenido que se puede repetir varias veces dentro de la misma pagina.Ahora colocamos el símbolo de copyright. se pueden encontrar en los navegadores buscando "entidades html"-->
+     <footer>
+        <!-- aqui lo que hemos hecho ha sido encapsular comandos. para ello, seleccionamos f1 y añadimos a elegir -->
+        <!-- aqui añadimos telefono de contacto, direccion,fax....etc -->
+         <address> 
+            C/Sevilla Este, nª67
+            <!-- salto de linea con br-->
+             <br>
+             42020, Sevilla
+             <br>
+             <a href="Tel:660445313">Numero de teléfono</a>
+             <br>
+             <a href="mailto:cruzsegurajoseantonio99@gmail.com">si eres mas de escribir, ya sabes</a>
+         </address>
+        <p>&copy; 2025 JOSE ANTONIO CRUZ </p>
+     </footer>
+</body>
+
+</html>
